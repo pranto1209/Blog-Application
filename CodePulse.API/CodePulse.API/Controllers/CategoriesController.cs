@@ -20,7 +20,6 @@ namespace CodePulse.API.Controllers
             this.categoryRepository = categoryRepository;
         }
 
-
         [HttpPost]
         //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
