@@ -1,4 +1,4 @@
-﻿namespace BlogApplicationAPI.Models.Domain
+﻿namespace BlogApplicationAPI.Models.Entities
 {
     public class BlogImage
     {

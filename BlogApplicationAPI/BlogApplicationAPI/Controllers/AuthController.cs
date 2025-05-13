@@ -1,4 +1,5 @@
-﻿using BlogApplicationAPI.Models.DTO;
+﻿using BlogApplicationAPI.Models.Domain;
+using BlogApplicationAPI.Models.DTO;
 using BlogApplicationAPI.Repositories.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -70,8 +71,11 @@ namespace BlogApplicationAPI.Controllers
 
             if (identityResult.Succeeded)
             {
-                // Add Role to user (Reader)
-                identityResult = await userManager.AddToRoleAsync(user, "Reader");
+                // Add Role to Reader
+                identityResult = await userManager.AddToRoleAsync(user, UserRoleClass.Reader);
+
+                // Add Role to Writer
+                identityResult = await userManager.AddToRoleAsync(user, UserRoleClass.Writer);
 
                 if (identityResult.Succeeded)
                 {

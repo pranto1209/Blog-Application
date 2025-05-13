@@ -1,5 +1,5 @@
-﻿using BlogApplicationAPI.Models.Domain;
-using BlogApplicationAPI.Models.DTO;
+﻿using BlogApplicationAPI.Models.DTO;
+using BlogApplicationAPI.Models.Entities;
 using BlogApplicationAPI.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
 

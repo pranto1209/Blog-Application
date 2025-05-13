@@ -1,4 +1,4 @@
-﻿using BlogApplicationAPI.Models.Domain;
+﻿using BlogApplicationAPI.Models.Entities;
 
 namespace BlogApplicationAPI.Repositories.Interface
 {

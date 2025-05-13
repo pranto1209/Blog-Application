@@ -24,6 +24,12 @@ export class AuthService {
     });
   }
 
+  registration(request: LoginRequest): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${environment.apiBaseUrl}/api/Auth/register`, {
+      email: request.email,
+      password: request.password
+    });
+  }
 
   setUser(user: User): void {
     this.$user.next(user);

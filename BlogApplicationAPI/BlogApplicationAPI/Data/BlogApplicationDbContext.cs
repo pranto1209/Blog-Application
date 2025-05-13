@@ -1,11 +1,16 @@
-﻿using BlogApplicationAPI.Models.Domain;
+﻿using BlogApplicationAPI.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApplicationAPI.Data
 {
     public class BlogApplicationDbContext : DbContext
     {
-        public BlogApplicationDbContext(DbContextOptions<BlogApplicationDbContext> options) : base(options)
+        public BlogApplicationDbContext()
+        {
+        }
+
+        public BlogApplicationDbContext(DbContextOptions<BlogApplicationDbContext> options)
+            : base(options)
         {
         }
 
